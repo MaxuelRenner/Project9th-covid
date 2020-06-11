@@ -28,7 +28,7 @@ cout<<endl;
 
 }
 
-void AgePrint (int num)
+int sumNumbers(int num)
 {
         if(num >0 && num<=10) {
 
@@ -50,40 +50,40 @@ void AgePrint (int num)
       else if (num =119 && num <= 120){
         cout<<"pich po dobre ne izlizai";
       } else {
-            cout<<"number is not between 10 & 100"<<endl;
+            cout<<"You must be over 10 to 100"<<endl;
    }
 }
 
-void Country (string names)
+int sumCountrys (string names)
 {
-        if(names =="Switzerland") {
+        if(names =="Switzerland" ||  names == "0") {
       cout<<"4 point";
       }
-   else if(names =="Spain") {
+   else if(names =="Spain" ||  names == "1") {
       cout<<"4 points";
    }
-   else if(names =="Italy") {
+   else if(names =="Italy" ||  names == "2") {
       cout<<"3 points ";
    }
-   else if(names =="Austria") {
+   else if(names =="Austria" ||  names == "3") {
       cout<<"3 points";
    }
-   else if(names =="Germany") {
+   else if(names =="Germany" ||  names == "4") {
       cout<<"2.5 points";
       }
-    else if(names =="Netherlands") {
+    else if(names =="Netherlands" ||  names == "5") {
       cout<<"2.5 points";
       }
-    else if(names =="France") {
+    else if(names =="France" ||  names == "6") {
       cout<<"2 points";
       }
-    else if(names =="Iran") {
+    else if(names =="Iran" ||  names == "7") {
         cout<<"2 points";
         }
-     if(names =="US") {
+     if(names =="US" ||  names == "8") {
         cout<<"1 points";
         }
-    else if(names == "Bulgaria" || "Bul" || "bul") {
+    else if(names == "Bulgaria" ||  names == "Bul" || names == "bul" ||  names == "9") {
         cout<<"1 points";
         } else {
       cout<<"Please Enter Country name from the listed above"<<endl;
@@ -95,9 +95,9 @@ int main()
 
    int age;
 
-        cout<<"Enter number between 10 & 100: "<<endl;
+        cout<<"Enter your age here form 10 to 100: "<<endl;
    cin>>age;
-    AgePrint(age);
+    sumNumbers(age);
 
 
 cout<<endl;
@@ -131,10 +131,10 @@ cout<<endl;
 
         string pesho;
 
-        cin>>pesho;
-            cout<<endl;
-        Country(pesho);
 
+            cout<<endl;
+        sumCountrys(pesho);
+cin>>pesho;
     cout<<endl;
 
         string NE;
@@ -161,11 +161,9 @@ cout<<endl;
 
 int sum;
 sum=0;
-sum=a+b;
+sum=a+b+age;
 cout<<"Final score is " <<sum<<endl;
 
 cout<<endl;
-
-cout<<"We couldn't calculate our voids so do it by yourself :D"<<endl;
 
 }
